@@ -4,6 +4,6 @@ def uppercase(string):
     for char in string:
         if ord(char) in range(97, 123):
             toUpper = 32
-        print(f"{chr(ord(char) - toUpper)}", end="")
+        print("{:c}".format(ord(char) - toUpper), end="")
         toUpper = 0
     print()
