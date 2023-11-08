@@ -9,6 +9,7 @@ def best_score(a_dictionary):
     for key in a_dictionary:
         if big_num is None:
             big_num = a_dictionary[key]
+            big_num_key = key
             continue
 
         if a_dictionary[key] >= big_num:
