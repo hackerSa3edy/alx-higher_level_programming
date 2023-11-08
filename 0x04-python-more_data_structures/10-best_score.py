@@ -11,7 +11,7 @@ def best_score(a_dictionary):
             big_num = a_dictionary[key]
             continue
 
-        if a_dictionary[key] > big_num:
+        if a_dictionary[key] >= big_num:
             big_num = a_dictionary[key]
             big_num_key = key
 
