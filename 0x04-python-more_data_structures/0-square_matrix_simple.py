@@ -9,5 +9,8 @@ def square_matrix_simple(matrix=[]):
         if not isinstance(l, list):
             return matrix
 
-    new_matrix = matrix.copy()
-    return [list(map(lambda x: x ** 2, sq,)) for sq in new_matrix]
+    new_matrix = []
+    for sq in matrix:
+        new_matrix.append(list(map(lambda x: x ** 2, sq)))
+
+    return new_matrix
