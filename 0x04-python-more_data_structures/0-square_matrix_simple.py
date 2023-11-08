@@ -5,8 +5,8 @@ def square_matrix_simple(matrix=[]):
     if not isinstance(matrix, list):
         return matrix
 
-    for l in matrix:
-        if not isinstance(l, list):
+    for sub_list in matrix:
+        if not isinstance(sub_list, list):
             return matrix
 
     new_matrix = []
