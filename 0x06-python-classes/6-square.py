@@ -65,8 +65,9 @@ class Square():
         """print the square
         """
         char = 0
-        for row in range(self.position[1]):
-            print()
+        if self.size > 0:
+            for row in range(self.position[1]):
+                print()
         for row in range(self.size):
             for space in range(self.position[0]):
                 print(" ", end="")
