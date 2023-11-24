@@ -78,7 +78,7 @@ class Square():
 
             for char in range(self.size):
                 Square_as_str += "#"
-            if row != self.size -1:
+            if row != self.size - 1:
                 Square_as_str += "\n"
         return Square_as_str
 
