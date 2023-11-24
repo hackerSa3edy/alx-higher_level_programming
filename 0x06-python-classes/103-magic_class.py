@@ -10,10 +10,11 @@ Returns:
 
 import math
 
+
 class MagicClass():
     """MagicClass for 103-magic_class.py task
     """
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """Initialize Variables
 
         Arguments:
