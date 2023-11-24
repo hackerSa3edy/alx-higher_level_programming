@@ -61,6 +61,29 @@ class Square():
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    def __str__(self):
+        """str representation for the instance of Square
+
+        Returns:
+            square as dash string
+        """
+        char = 0
+        Square_as_str = ""
+        if self.size > 0:
+            for row in range(self.position[1]):
+                Square_as_str += "\n"
+        for row in range(self.size):
+            for space in range(self.position[0]):
+                Square_as_str += " "
+
+            for char in range(self.size):
+                Square_as_str += "#"
+            if row != self.size -1:
+                Square_as_str += "\n"
+        if char == 0:
+            Square_as_str += "\n"
+        return Square_as_str
+
     def my_print(self):
         """print the square
         """
@@ -104,25 +127,3 @@ class Square():
         elif not all(x >= 0 for x in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
-    def __str__(self):
-        """str representation for the instance of Square
-
-        Returns:
-            square as dash string
-        """
-        char = 0
-        Square_as_str = []
-        if self.size > 0:
-            for row in range(self.position[1]):
-                Square_as_str.append("\n")
-        for row in range(self.size):
-            for space in range(self.position[0]):
-                Square_as_str.append(" ")
-
-            for char in range(self.size):
-                Square_as_str.append("#")
-            Square_as_str.append("\n")
-        if char == 0:
-            Square_as_str.append("\n")
-        return "".join(Square_as_str)
