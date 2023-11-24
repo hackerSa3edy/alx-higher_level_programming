@@ -80,8 +80,6 @@ class Square():
                 Square_as_str += "#"
             if row != self.size -1:
                 Square_as_str += "\n"
-        if char == 0:
-            Square_as_str += "\n"
         return Square_as_str
 
     def my_print(self):
