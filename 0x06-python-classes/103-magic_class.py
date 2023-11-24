@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-import math
-"""103-magic_class.py Module
+"""103-magic_class module
 
 Raises:
     TypeError: radius must be a number
@@ -8,6 +7,8 @@ Raises:
 Returns:
     The raduis and the circumference
 """
+
+import math
 
 class MagicClass():
     """MagicClass for 103-magic_class.py task
