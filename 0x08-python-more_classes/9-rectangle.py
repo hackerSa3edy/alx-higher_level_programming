@@ -98,7 +98,7 @@ class Rectangle():
             return ""
         objstr = []
         for _ in range(self.height):
-            objstr.append("{:s}".format(Rectangle.print_symbol) * self.width)
+            objstr.append("{:s}".format(self.print_symbol) * self.width)
             if _ != self.height - 1:
                 objstr.append("\n")
 
@@ -142,17 +142,10 @@ class Rectangle():
         Keyword Arguments:
             size -- Size of the square (default: {0})
 
-        Raises:
-            TypeError: size must be an integer
-            ValueError: size must be >= 0
-
         Returns:
             New rectangle instance with size == width == height
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
+
         return cls(size, size)
 
     def __del__(self):

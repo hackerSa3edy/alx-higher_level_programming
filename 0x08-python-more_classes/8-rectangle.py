@@ -98,7 +98,7 @@ class Rectangle():
             return ""
         objstr = []
         for _ in range(self.height):
-            objstr.append("{:s}".format(Rectangle.print_symbol) * self.width)
+            objstr.append("{:s}".format(self.print_symbol) * self.width)
             if _ != self.height - 1:
                 objstr.append("\n")
 
