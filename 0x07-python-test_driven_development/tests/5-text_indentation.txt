@@ -1,0 +1,24 @@
+5-text_indentation module tests
+==========================
+`text_indentation` function tests
+--------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation('Narrator: Hello. My name is Abdelrahman. What is your name?')
+Narrator:
+<BLANKLINE>
+ Hello.
+<BLANKLINE>
+ My name is Abdelrahman.
+<BLANKLINE>
+ What is your name?
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("SAFE")
+SAFE
