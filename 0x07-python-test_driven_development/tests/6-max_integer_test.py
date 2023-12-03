@@ -36,3 +36,5 @@ class max_integer_test(unittest.TestCase):
         self.assertEqual(max_int((1, -1e1000)), 1)
         self.assertEqual(max_int([2, 3, 4, 19.5, 20]), 20)
         self.assertEqual(max_int('esZz'), 'z')
+        self.assertEqual(max_int([1, 2, 5, 3, 4]), 5)
+        self.assertEqual(max_int((1,)), 1)
