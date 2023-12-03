@@ -25,12 +25,14 @@ class max_integer_test(unittest.TestCase):
             max_int({3, 5})
             max_int(32.3)
             max_int(None)
+            max_int('3', '2')
 
     def test_valid_data_types(self):
         """tests the expected result from the max_integer func
         """
         self.assertEqual(max_int(), None)
-        self.assertEqual(max_int(1, 1e1000), float('inf'))
-        self.assertEqual(max_int(-1e1100, -1e1000), float('-inf'))
-        self.assertEqual(max_int(1, -1e1000), 1)
+        self.assertEqual(max_int([1, 1e1000]), float('inf'))
+        self.assertEqual(max_int([-1e1100, -1e1000]), float('-inf'))
+        self.assertEqual(max_int((1, -1e1000)), 1)
         self.assertEqual(max_int([2, 3, 4, 19.5, 20]), 20)
+        self.assertEqual(max_int('esZz'), 'z')
