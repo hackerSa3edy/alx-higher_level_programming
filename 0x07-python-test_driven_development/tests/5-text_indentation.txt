@@ -14,7 +14,6 @@ Narrator:
 <BLANKLINE>
  What is your name?
 <BLANKLINE>
-<BLANKLINE>
 
 >>> text_indentation(None)
 Traceback (most recent call last):
