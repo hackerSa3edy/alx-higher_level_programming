@@ -23,4 +23,4 @@ def text_indentation(text):
     new_text = new_text.replace('?', '?\n\n')
     new_text = new_text.replace(':', ':\n\n')
 
-    print(new_text, end="")
+    [print(line.strip()) for line in new_text.splitlines()]

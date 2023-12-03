@@ -8,11 +8,11 @@
 >>> text_indentation('Narrator: Hello. My name is Abdelrahman. What is your name?')
 Narrator:
 <BLANKLINE>
- Hello.
+Hello.
 <BLANKLINE>
- My name is Abdelrahman.
+My name is Abdelrahman.
 <BLANKLINE>
- What is your name?
+What is your name?
 <BLANKLINE>
 
 >>> text_indentation(None)
