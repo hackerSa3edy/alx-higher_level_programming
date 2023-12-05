@@ -6,7 +6,6 @@ Initiates a MyInt class that inherits from int class.
 """
 
 
-
 class MyInt(int):
     """MyInt
 
@@ -23,7 +22,6 @@ class MyInt(int):
             True if self object != __value, False otherwise
         """
         return super().__ne__(__value)
-
 
     def __ne__(self, __value: object) -> bool:
         """__ne__

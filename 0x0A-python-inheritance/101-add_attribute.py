@@ -7,7 +7,6 @@ allows adding new attributes.
 """
 
 
-
 def add_attribute(obj, key, value):
     """add_attribute
 
