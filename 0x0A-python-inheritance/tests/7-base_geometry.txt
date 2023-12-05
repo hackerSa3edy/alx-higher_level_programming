@@ -50,6 +50,22 @@ TypeError: str must be an integer
 Traceback (most recent call last):
 TypeError: str must be an integer
 
+>>> base_geo.integer_validator('str', [1, 2])
+Traceback (most recent call last):
+TypeError: str must be an integer
+
+>>> base_geo.integer_validator('str', (1, 2))
+Traceback (most recent call last):
+TypeError: str must be an integer
+
+>>> base_geo.integer_validator('str', {1, 2})
+Traceback (most recent call last):
+TypeError: str must be an integer
+
+>>> base_geo.integer_validator('str', {'a': 1, 'b': 2})
+Traceback (most recent call last):
+TypeError: str must be an integer
+
 >>> base_geo.integer_validator('str', 33)
 
 >>> base_geo.integer_validator('str', '33')
