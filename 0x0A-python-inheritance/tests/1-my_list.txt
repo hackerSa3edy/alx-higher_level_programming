@@ -58,7 +58,7 @@ print a sorted version of the list.
 
 >>> newlist.extend([-2, -6, -3, -1])
 >>> newlist.print_sorted()
-[-1, -2, -3, -6]
+[-6, -3, -2, -1]
 
 >>> newlist.clear()
 >>> print(newlist)
