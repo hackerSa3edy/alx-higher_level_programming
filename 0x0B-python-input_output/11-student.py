@@ -45,4 +45,5 @@ class Student():
         Arguments:
             json -- The new attributes dictionary
         """
-        self.__dict__ = json
+        for key, value in json.items():
+            setattr(self, key, value)
