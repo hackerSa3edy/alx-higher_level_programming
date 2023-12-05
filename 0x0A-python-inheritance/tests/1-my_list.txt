@@ -44,6 +44,9 @@ print a sorted version of the list.
 >>> newlist.print_sorted()
 [-5, 0, 1, 3, 4, 7]
 
+>>> print(newlist)
+[1, 4, 3, 7, 0, -5]
+
 >>> newlist.clear()
 
 >>> newlist.extend([3.5, 2.5, 5.1, 2.3])
