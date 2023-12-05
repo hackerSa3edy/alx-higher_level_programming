@@ -1,0 +1,53 @@
+============================
+7-base_geometry module
+============================
+
+
+`BaseGeometry` class
+-----------------------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> base_geo = BaseGeometry()
+
+>>> base_geo = BaseGeometry(3)
+Traceback (most recent call last):
+TypeError: BaseGeometry() takes no arguments
+
+
+`area` method
+-----------------------------------
+
+>>> base_geo.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> base_geo.area('str')
+Traceback (most recent call last):
+TypeError: area() takes 1 positional argument but 2 were given
+
+
+`integer_validator` method
+-----------------------------------
+
+>>> base_geo.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> base_geo.integer_validator(3)
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> base_geo.integer_validator('str', 33)
+
+>>> base_geo.integer_validator('str', '33')
+Traceback (most recent call last):
+TypeError: str must be an integer
+
+>>> base_geo.integer_validator('str', -44)
+Traceback (most recent call last):
+ValueError: str must be greater than 0
+
+>>> base_geo.integer_validator('str', 3, 2)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
