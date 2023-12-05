@@ -8,6 +8,13 @@ after each line containing a specific string.
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """append text after matching a keyword
+
+    Keyword Arguments:
+        filename -- The file name (default: {""})
+        search_string -- The keyword (default: {""})
+        new_string -- The new text (default: {""})
+    """
     org_file = ""
     with open(filename, 'r+') as file:
         while (True):
