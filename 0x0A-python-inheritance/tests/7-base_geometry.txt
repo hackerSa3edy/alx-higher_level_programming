@@ -38,6 +38,18 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+>>> base_geo.integer_validator('str', 0)
+Traceback (most recent call last):
+ValueError: str must be greater than 0
+
+>>> base_geo.integer_validator('str', 9.2)
+Traceback (most recent call last):
+TypeError: str must be an integer
+
+>>> base_geo.integer_validator('str', True)
+Traceback (most recent call last):
+TypeError: str must be an integer
+
 >>> base_geo.integer_validator('str', 33)
 
 >>> base_geo.integer_validator('str', '33')
