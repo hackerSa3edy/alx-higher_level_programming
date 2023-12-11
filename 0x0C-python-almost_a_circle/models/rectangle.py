@@ -126,7 +126,6 @@ class Rectangle(Base):
             Rectangle object with the character #
         """
 
-        char = 0
         if self.height > 0:
             for row in range(self.y):
                 print()
@@ -137,8 +136,6 @@ class Rectangle(Base):
                 for char in range(self.width):
                     print("#", end="")
                 print()
-        if char == 0:
-            print()
 
     def update(self, *args, **kwargs):
         """Method that changed the order of arguments for rectangle object
