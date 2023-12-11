@@ -127,7 +127,7 @@ class Rectangle(Base):
         """
 
         char = 0
-        if self.width > 0 and self.height > 0:
+        if self.height > 0:
             for row in range(self.y):
                 print()
             for row in range(self.height):
