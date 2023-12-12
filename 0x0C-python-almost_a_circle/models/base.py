@@ -46,7 +46,7 @@ class Base():
         obj_list = []
         if list_objs:
             for obj in list_objs:
-                json_dict = cls.to_dictionary(obj)
+                json_dict = obj.to_dictionary()
                 obj_list.append(json_dict)
         json_str = cls.to_json_string(obj_list)
         with open(f"{cls.__name__}.json", 'w') as json_file:
