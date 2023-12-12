@@ -90,7 +90,10 @@ class Base():
         Return:
             A instance with all attributes already set
         """
-        dummy = cls(2, 3)
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(2, 3)
+        elif cls.__name__ == 'Square':
+            dummy = cls(2, 3)
         dummy.update(**dictionary)
         return dummy
 
