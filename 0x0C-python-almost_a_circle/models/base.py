@@ -93,7 +93,7 @@ class Base():
         if cls.__name__ == 'Rectangle':
             dummy = cls(2, 3)
         elif cls.__name__ == 'Square':
-            dummy = cls(2, 3)
+            dummy = cls(2)
         dummy.update(**dictionary)
         return dummy
 
