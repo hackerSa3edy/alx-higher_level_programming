@@ -30,15 +30,9 @@ class Base():
         Return:
             JSON string
         """
-        obj_list = []
         if list_dictionaries is None or list_dictionaries == []:
-            return obj_list
-        for instance in list_dictionaries:
-            if isinstance(instance, Base):
-                obj_list.append(instance.to_dictionary())
-            else:
-                obj_list.append(instance)
-        return json.dumps(obj_list)
+            return []
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -49,8 +43,14 @@ class Base():
         Return:
             Always nothing
         """
+        obj_list = []
+        if list_objs:
+            for obj in list_objs:
+                json_dict = cls.to_dictionary(obj)
+                obj_list.append(json_dict)
+        json_str = cls.to_json_string(obj_list)
         with open(f"{cls.__name__}.json", 'w') as json_file:
-            json_file.write(cls.to_json_string(list_objs))
+            json_file.write(json_str)
 
     @classmethod
     def save_to_file_csv(cls, dict_list):
