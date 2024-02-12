@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const { argv } = require('node:process');
+const { argv } = require('process');
 
 const isNumber = Number(argv[2]);
 if (isNaN(isNumber)) {
