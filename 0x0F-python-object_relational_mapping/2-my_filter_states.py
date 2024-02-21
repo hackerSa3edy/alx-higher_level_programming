@@ -1,7 +1,19 @@
 #!/usr/bin/python3
+"""Retrieving all states which its name matches the specified
+item from the db using MySQLdb connector
+"""
 
 
 def main(MYSQL_USERNAME, MYSQL_PASSWD, DB_NAME, SEARCH_ITEM):
+    """Retrieving all states which its name matches the specified
+    item from the db
+
+    Arguments:
+        MYSQL_USERNAME -- DB username
+        MYSQL_PASSWD -- DB password
+        DB_NAME -- DB name
+        SEARCH_ITEM -- Speicified item
+    """
     conn = MySQLdb.Connect(
         host="localhost",
         port=3306,

@@ -1,7 +1,20 @@
 #!/usr/bin/python3
+"""Retrieving safely all cities which belongs to specified state
+from the db using MySQLdb connector
+"""
 
 
 def main(MYSQL_USERNAME, MYSQL_PASSWD, DB_NAME, SEARCH_ITEM):
+    """Retrieving safely all cities which belongs to specified state
+    from the db
+
+    Arguments:
+        MYSQL_USERNAME -- DB username
+        MYSQL_PASSWD -- DB password
+        DB_NAME -- DB name
+        SEARCH_ITEM -- Specified item
+    """
+
     conn = MySQLdb.Connect(
         host="localhost",
         port=3306,
