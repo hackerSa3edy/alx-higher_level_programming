@@ -21,7 +21,8 @@ def main(MYSQL_USERNAME, MYSQL_PASSWD, DB_NAME):
         charset="utf8")
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY "
+                "states.id ASC")
     data = cur.fetchall()
     for row in data:
         print(row)

@@ -23,7 +23,8 @@ def main(MYSQL_USERNAME, MYSQL_PASSWD, DB_NAME, SEARCH_ITEM):
         charset="utf8")
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name='{:s}'".format(SEARCH_ITEM))
+    cur.execute("SELECT * FROM states WHERE name='{:s}' ORDER BY "
+                "states.id ASC".format(SEARCH_ITEM))
     data = cur.fetchall()
     for row in data:
         print(row)
