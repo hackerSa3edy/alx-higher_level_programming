@@ -6,8 +6,8 @@
 def main():
     """Inserts the state and its corresbonding cities
     """
-    CA = State(name='Sohag')
-    SF = City(name='El-Maragha', state=CA)
+    CA = State(name='California')
+    SF = City(name='San Francisco', state=CA)
     session.add(SF)
     session.commit()
 
