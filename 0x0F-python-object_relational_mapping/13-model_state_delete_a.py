@@ -2,6 +2,7 @@
 """Delete a row
 """
 
+
 def main():
     """Delete the rows from state table which its name contains 'a'
     """

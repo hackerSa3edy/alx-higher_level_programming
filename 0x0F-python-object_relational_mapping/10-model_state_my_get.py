@@ -2,6 +2,7 @@
 """Fetch state from the DBStorage
 """
 
+
 def main():
     """Retrieve all states ordered by its id where the state name
     matches the specified keyword from the states table

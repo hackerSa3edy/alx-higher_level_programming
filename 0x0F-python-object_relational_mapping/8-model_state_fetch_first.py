@@ -2,6 +2,7 @@
 """Fetch state from the DBStorage
 """
 
+
 def main():
     """Retrieve the first state from the states table
     """

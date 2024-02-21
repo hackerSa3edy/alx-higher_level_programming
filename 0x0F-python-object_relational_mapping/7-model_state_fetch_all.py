@@ -2,6 +2,7 @@
 """Fetch state from the DBStorage
 """
 
+
 def main():
     """Retrieve all states ordered by its id from the states table
     """
