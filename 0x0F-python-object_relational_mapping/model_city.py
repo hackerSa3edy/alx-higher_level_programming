@@ -7,9 +7,6 @@ from model_state import Base
 
 class City(Base):
     """City Object Mapped to cities table
-
-    Arguments:
-        Base -- SQLAlchemy Base object
     """
     __tablename__ = 'cities'
     id = Column(
