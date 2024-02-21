@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-
+"""Fetch state from the DBStorage
+"""
 
 def main():
+    """Retrieve all states ordered by its id where the state name
+    contains 'a' from the states table
+    """
     data = session.query(State).where(State.name.contains('a'))\
         .order_by(State.id).all()
 

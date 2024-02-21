@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-
+"""Fetch state from the DBStorage
+"""
 
 def main():
+    """Retrieve all states ordered by its id where the state name
+    matches the specified keyword from the states table
+    """
     data = session.query(State.id).\
         where(State.name == SEARCH_ITEM).\
         order_by(State.id).all()

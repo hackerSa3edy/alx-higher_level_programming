@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-
+"""Fetch state from the DBStorage
+"""
 
 def main():
+    """Retrieve the first state from the states table
+    """
     obj = session.query(State).order_by(State.id).first()
 
     if obj:

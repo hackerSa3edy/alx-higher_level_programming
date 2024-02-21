@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-
+"""Delete a row
+"""
 
 def main():
+    """Delete the rows from state table which its name contains 'a'
+    """
     session.query(State).filter(State.name.contains('a')).\
         delete(synchronize_session='fetch')
     session.commit()

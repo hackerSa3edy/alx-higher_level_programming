@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""Fetch connected city and states
+"""
 
 
 def main():
+    """Retrieve the connected cities and states
+    """
     data = session.query(
         State.name.label('state_name'),
         City.id.label('city_id'),

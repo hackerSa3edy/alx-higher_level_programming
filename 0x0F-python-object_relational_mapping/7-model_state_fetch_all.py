@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-
+"""Fetch state from the DBStorage
+"""
 
 def main():
+    """Retrieve all states ordered by its id from the states table
+    """
     data = session.query(State).order_by(State.id).all()
     for obj in data:
         print(f"{obj.id}: {obj.name}")

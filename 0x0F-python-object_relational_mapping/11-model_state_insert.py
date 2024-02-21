@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""Insert new row in states table
+"""
 
 
 def main():
+    """Insert new row in state table
+    """
     Louisiana = State(name='Louisiana')
     session.add(Louisiana)
     session.commit()

@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""Update a row name column
+"""
 
 
 def main():
+    """Update the value of the name column in the state table
+    """
     session.query(State).filter_by(id=2).update({State.name: 'New Mexico'})
     session.commit()
 
