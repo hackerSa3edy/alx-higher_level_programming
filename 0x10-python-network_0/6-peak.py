@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This module contains a function for finding a peak element in a list of integers.
+This module contains a function for finding a peak element in a
+list of integers.
 """
+
 
 def find_peak(list_of_integers=[]):
     """
@@ -16,10 +18,18 @@ def find_peak(list_of_integers=[]):
     if not list_of_integers:
         return None
 
-    return is_peak(list_of_integers)
+    length = len(list_of_integers)
+    center = length // 2
+    for switch in range(2):
+        for index in range(center + switch, length, 2):
+            if is_peak(list_of_integers, index) is not None:
+                return list_of_integers[index]
+        for index in range(center + switch, length, -2):
+            if is_peak(list_of_integers, index) is not None:
+                return list_of_integers[index]
 
 
-def is_peak(arr):
+def is_peak(arr, index):
     """
     Helper function to find a peak element in a list.
 
@@ -33,19 +43,15 @@ def is_peak(arr):
         return None
 
     length = len(arr)
-    center = length // 2
-    if center == length - 1:
-        if arr[center] > arr[center - 1]:
-            return arr[center]
+    if index == length - 1:
+        if arr[index] > arr[index - 1]:
+            return arr[index]
         return None
-    elif center == 0:
-        if arr[center] < arr[center + 1]:
-            return arr[center]
+    elif index == 0:
+        if arr[index] < arr[index + 1]:
+            return arr[index]
         return None
-    elif (arr[center] >= arr[center - 1]) and (arr[center] >= arr[center + 1]):
-        return arr[center]
+    elif (arr[index] >= arr[index - 1]) and (arr[index] >= arr[index + 1]):
+        return arr[index]
 
-    peak = is_peak(arr[center:])
-    if peak is None:
-        peak = is_peak(arr[:center + 1])
-    return peak
+    return None
