@@ -7,10 +7,10 @@ list of integers.
 
 def find_peak(list_of_integers=[]):
     """
-    Find a peak element in a list of integers.
+    Find a peak element in an unordered list of integers using binary search.
 
     Args:
-        list_of_integers (list): A list of integers.
+        list_of_integers (list): An unordered list of integers.
 
     Returns:
         int: The peak element, or None if the list is empty.
@@ -18,40 +18,15 @@ def find_peak(list_of_integers=[]):
     if not list_of_integers:
         return None
 
-    length = len(list_of_integers)
-    center = length // 2
-    for switch in range(2):
-        for index in range(center + switch, length, 2):
-            if is_peak(list_of_integers, index) is not None:
-                return list_of_integers[index]
-        for index in range(center + switch, length, -2):
-            if is_peak(list_of_integers, index) is not None:
-                return list_of_integers[index]
+    low = 0
+    high = len(list_of_integers) - 1
 
+    while low < high:
+        mid = (low + high) // 2
 
-def is_peak(arr, index):
-    """
-    Helper function to find a peak element in a list.
+        if list_of_integers[mid] < list_of_integers[mid + 1]:
+            low = mid + 1
+        else:
+            high = mid
 
-    Args:
-        arr (list): A list of integers.
-
-    Returns:
-        int: The peak element, or None if the list is empty.
-    """
-    if not arr:
-        return None
-
-    length = len(arr)
-    if index == length - 1:
-        if arr[index] > arr[index - 1]:
-            return arr[index]
-        return None
-    elif index == 0:
-        if arr[index] < arr[index + 1]:
-            return arr[index]
-        return None
-    elif (arr[index] >= arr[index - 1]) and (arr[index] >= arr[index + 1]):
-        return arr[index]
-
-    return None
+    return list_of_integers[low]
