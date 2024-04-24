@@ -15,17 +15,14 @@
  * Finally, it logs the count to the console.
  */
 
-const process = require('process');
 const request = require('request');
-
-const characterURL = 'https://swapi-api.alx-tools.com/api/people/18/';
 const apiURL = process.argv[2];
 
-request.get(apiURL, (_, resp) => {
+request.get(apiURL, (_, resp, body) => {
   let characterRepeat = 0;
-  const results = JSON.parse(resp.body).results;
+  const results = JSON.parse(body).results;
   results.forEach(film => {
-    if (film.characters.includes(characterURL)) {
+    if (film.characters.find((character) => character.endsWith('/18/'))) {
       characterRepeat += 1;
     }
   });
